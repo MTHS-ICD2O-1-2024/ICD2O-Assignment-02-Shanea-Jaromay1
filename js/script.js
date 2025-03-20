@@ -5,13 +5,17 @@
 // This file contains the JS functions for index.html
 
 /**
- * Show volume
+ * Show area
  */
 function enterClicked() {
   // input
   const radiusNumber = document.getElementById("radius-number").value
   const heightNumber = document.getElementById("height-number").value
+
+  // process
+  let areaOfCylinder = 2 * Math.PI * radiusNumber * ( radiusNumber + heightNumber)
+
   // output
-  document.getElementById("volume").innerHTML =
-    "Your volume is: " + radiusNumber + ", " + heightNumber + "."
+  document.getElementById("area").innerHTML =
+    'Your surface area is: ' + areaOfCylinder + ' cm²'
 }
