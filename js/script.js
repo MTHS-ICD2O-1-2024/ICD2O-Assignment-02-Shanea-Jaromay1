@@ -9,13 +9,12 @@
  */
 function enterClicked() {
   // input
-  const radiusNumber = document.getElementById("radius-number").value
-  const heightNumber = document.getElementById("height-number").value
+  const radiusNumber = parseFloat(document.getElementById("radius-number").value);
+  const heightNumber = parseFloat(document.getElementById("height-number").value);
 
   // process
-  let areaOfCylinder = 2 * Math.PI * radiusNumber * ( radiusNumber + heightNumber)
+  const areaOfCylinder = 2 * Math.PI * radiusNumber * (radiusNumber + heightNumber);
 
-  // output
-  document.getElementById("area").innerHTML =
-    'Your surface area is: ' + areaOfCylinder + ' cm²'
+  // output with more controlled precision
+  document.getElementById("area").innerHTML = "Your surface area is:" + areaOfCylinder + "cm²";
 }
