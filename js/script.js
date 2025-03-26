@@ -4,6 +4,8 @@
 // Created on: March 2025
 // This file contains the JS functions for index.html
 
+"use strict"
+
 /**
  * Show area
  */
@@ -16,5 +18,5 @@ function enterClicked() {
   const areaOfCylinder = 2 * Math.PI * radiusNumber * (radiusNumber + heightNumber);
 
   // output with more controlled precision
-  document.getElementById("area").innerHTML = "Your surface area is:" + areaOfCylinder + "cm²";
+  document.getElementById("area").innerHTML = "Your surface area is:" + areaOfCylinder.toFixed(2) + "cm²";
 }
